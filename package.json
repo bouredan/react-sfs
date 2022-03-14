@@ -1,0 +1,39 @@
+{
+  "name": "@bouredan/react-sfs",
+  "version": "0.1.0",
+  "description": "Semantic faceted search API.",
+  "keywords": [
+    "sparql",
+    "query",
+    "semantic web",
+    "rdf",
+    "rdfjs"
+  ],
+  "author": "bouredan <daniel.bourek@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouredan/react-sfs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bouredan/react-sfs/issues"
+  },
+  "homepage": "https://github.com/bouredan/react-sfs#readme",
+  "license": "MIT",
+  "main": "dist",
+  "typings": "index",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@bouredan/sfs-api": "^0.1.2",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.40",
+    "typescript": "^4.5.5"
+  }
+}

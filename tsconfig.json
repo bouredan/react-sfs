@@ -1,0 +1,29 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "incremental": true,
+    "module": "commonjs",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "outDir": "./dist",
+    "target": "es5",
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "importHelpers": false,
+    "strict": true
+  },
+  "include": [
+    "src",
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
