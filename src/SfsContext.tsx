@@ -1,6 +1,5 @@
 import {createContext, ReactNode, useCallback, useContext, useState} from "react";
-import {SearchResults} from "@bouredan/sfs-api/dist";
-import {SfsApi} from "@bouredan/sfs-api/dist";
+import {SearchResults, SfsApi} from "@bouredan/sfs-api";
 
 interface ISfsContext {
   sfsApi: SfsApi,
