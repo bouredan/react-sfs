@@ -1,5 +1,5 @@
 import {useCallback, useContext, useEffect, useState} from "react"
-import {FacetOptions, Facet} from "@bouredan/sfs-api/dist";
+import {FacetOptions, Facet} from "@bouredan/sfs-api";
 
 import {SfsContext} from "./SfsContext";
 
