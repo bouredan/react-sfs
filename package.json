@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/bouredan/react-sfs/issues"
   },
-  "homepage": "https://github.com/bouredan/react-sfs#readme",
+  "homepage": "https://github.com/bouredan/react-sfs",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
