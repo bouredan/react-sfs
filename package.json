@@ -1,7 +1,7 @@
 {
   "name": "react-sfs",
-  "version": "1.0.0",
-  "description": "Semantic faceted search API.",
+  "version": "1.0.1",
+  "description": "React hooks for sfs-api.",
   "keywords": [
     "react",
     "sfs"
@@ -38,6 +38,6 @@
     "doc": "docs"
   },
   "dependencies": {
-    "sfs-api": "^1.0.0"
+    "sfs-api": "latest"
   }
 }

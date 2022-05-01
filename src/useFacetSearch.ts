@@ -1,20 +1,7 @@
 import {useEffect, useState} from "react";
 import {Results, SfsApi} from "sfs-api";
 
-/**
- * React hook for using facet search state.
- *
- * @param sfsApi - {@link SfsApi} to subscribe
- */
-export function useFacetSearch(sfsApi: SfsApi): {
-  /**
-   * See {@link sfsApi.newSearch}.
-   */
-  newSearch: (searchPattern: string) => void,
-  /**
-   * See {@link sfsApi.fetchResults}.
-   */
-  fetchResults: () => Promise<Results>,
+export interface UseFacetSearchResult {
   /**
    * Current filtered results of facet search.
    */
@@ -23,7 +10,14 @@ export function useFacetSearch(sfsApi: SfsApi): {
    * True if fetching results is in progress.
    */
   isFetching: boolean,
-} {
+}
+
+/**
+ * React hook for using facet search state.
+ *
+ * @param sfsApi - {@link SfsApi} to subscribe
+ */
+export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
 
   const [results, setResults] = useState<Results>();
   const [isFetching, setIsFetching] = useState(false);
@@ -39,8 +33,6 @@ export function useFacetSearch(sfsApi: SfsApi): {
   }, []);
 
   return {
-    newSearch: sfsApi.newSearch,
-    fetchResults: sfsApi.fetchResults,
     results,
     isFetching,
   };

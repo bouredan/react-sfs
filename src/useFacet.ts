@@ -1,12 +1,7 @@
 import {useCallback, useEffect, useState} from "react"
 import {Facet, FacetOption} from "sfs-api";
 
-
-/**
- * React hook for using facet state.
- * @param facet - facet to subscribe
- */
-export function useFacet<Value>(facet: Facet<Value>): {
+export interface UseFacetResult<Value> {
   /**
    * Facet options.
    */
@@ -25,7 +20,13 @@ export function useFacet<Value>(facet: Facet<Value>): {
    * True if fetching facet options is in progress.
    */
   isFetching: boolean,
-} {
+}
+
+/**
+ * React hook for using facet state.
+ * @param facet - facet to subscribe
+ */
+export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
   const [options, setOptions] = useState<FacetOption[]>([]);
   const [value, setValue] = useState<Value>();
   const [isFetching, setIsFetching] = useState(false);
