@@ -38,6 +38,9 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
 
   useEffect(() => {
     facet.sfsApi.eventStream.on("FACET_VALUE_CHANGED", (event) => {
+      setValue(undefined);
+    });
+    facet.sfsApi.eventStream.on("FACET_VALUE_CHANGED", (event) => {
       if (event.facetId === facet.id) {
         setValue(event.value as Value);
       }
