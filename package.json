@@ -1,6 +1,6 @@
 {
   "name": "react-sfs",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React hooks for sfs-api.",
   "keywords": [
     "react",

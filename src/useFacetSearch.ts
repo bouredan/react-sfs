@@ -14,6 +14,10 @@ export interface UseFacetSearchResult {
    * Last search pattern used for fetching results.
    */
   lastSearchPattern: string,
+  /**
+   * Error of the latest results fetch. It is undefined if no errors.
+   */
+  error: any,
 }
 
 /**
@@ -47,7 +51,8 @@ export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
 
   return {
     results,
-    isFetching,
     lastSearchPattern,
+    isFetching,
+    error,
   };
 }

@@ -20,6 +20,10 @@ export interface UseFacetResult<Value> {
    * True if fetching facet options is in progress.
    */
   isFetching: boolean,
+  /**
+   * Error of the latest options fetch. It is undefined if no errors.
+   */
+  error: any,
 }
 
 /**
@@ -60,7 +64,7 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
     facet.sfsApi.eventStream.on("FETCH_FACET_OPTIONS_ERROR", (event) => {
       if (event.facetId === facet.id) {
         setIsFetching(false);
-        setError(error);
+        setError(event.error);
       }
     });
     facet.refreshOptions();
@@ -71,5 +75,6 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
     value,
     onValueChange,
     isFetching,
+    error
   };
 }
