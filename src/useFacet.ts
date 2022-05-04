@@ -37,7 +37,7 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
   }, [facet]);
 
   useEffect(() => {
-    facet.sfsApi.eventStream.on("FACET_VALUE_CHANGED", (event) => {
+    facet.sfsApi.eventStream.on("RESET_STATE", () => {
       setValue(undefined);
     });
     facet.sfsApi.eventStream.on("FACET_VALUE_CHANGED", (event) => {
