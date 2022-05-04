@@ -1,6 +1,6 @@
 {
   "name": "react-sfs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React hooks for sfs-api.",
   "keywords": [
     "react",
@@ -26,6 +26,9 @@
     "build": "tsc",
     "prepublish": "yarn build && npx typedoc index.ts"
   },
+  "dependencies": {
+    "sfs-api": "^1.0.4"
+  },
   "peerDependencies": {
     "react": "^17.0.2"
   },
@@ -36,8 +39,5 @@
   },
   "directories": {
     "doc": "docs"
-  },
-  "dependencies": {
-    "sfs-api": "^1.0.3"
   }
 }

@@ -47,15 +47,14 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
     });
     facet.sfsApi.eventStream.on("FETCH_FACET_OPTIONS_PENDING", (event) => {
       if (event.facetId === facet.id) {
-        setOptions([]);
         setIsFetching(true);
         setError(undefined);
       }
     });
     facet.sfsApi.eventStream.on("FETCH_FACET_OPTIONS_SUCCESS", (event) => {
       if (event.facetId === facet.id) {
-        setOptions(event.options);
         setIsFetching(false);
+        setOptions(event.options);
       }
     });
     facet.sfsApi.eventStream.on("FETCH_FACET_OPTIONS_ERROR", (event) => {

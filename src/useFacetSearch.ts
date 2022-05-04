@@ -24,17 +24,24 @@ export interface UseFacetSearchResult {
 export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
 
   const [results, setResults] = useState<Results>();
-  const [isFetching, setIsFetching] = useState(false);
   const [lastSearchPattern, setLastSearchPattern] = useState("");
+  const [isFetching, setIsFetching] = useState(false);
+  const [error, setError] = useState();
 
   useEffect(() => {
     sfsApi.eventStream.on("NEW_SEARCH", (event) => setLastSearchPattern(event.searchPattern));
-    sfsApi.eventStream.on("FETCH_RESULTS_PENDING", () => setIsFetching(true));
-    sfsApi.eventStream.on("FETCH_RESULTS_SUCCESS", (event) => {
-      setResults(event.results as Results);
-      setIsFetching(false);
+    sfsApi.eventStream.on("FETCH_RESULTS_PENDING", () => {
+      setIsFetching(true);
+      setError(undefined);
     });
-    sfsApi.eventStream.on("FETCH_RESULTS_ERROR", () => setIsFetching(false));
+    sfsApi.eventStream.on("FETCH_RESULTS_SUCCESS", (event) => {
+      setIsFetching(false);
+      setResults(event.results as Results);
+    });
+    sfsApi.eventStream.on("FETCH_RESULTS_ERROR", (event) => {
+      setIsFetching(false);
+      setError(event.error);
+    });
     sfsApi.fetchResults();
   }, []);
 
