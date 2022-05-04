@@ -10,6 +10,10 @@ export interface UseFacetSearchResult {
    * True if fetching results is in progress.
    */
   isFetching: boolean,
+  /**
+   * Last search pattern used for fetching results.
+   */
+  lastSearchPattern: string,
 }
 
 /**
@@ -21,8 +25,10 @@ export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
 
   const [results, setResults] = useState<Results>();
   const [isFetching, setIsFetching] = useState(false);
+  const [lastSearchPattern, setLastSearchPattern] = useState("");
 
   useEffect(() => {
+    sfsApi.eventStream.on("NEW_SEARCH", (event) => setLastSearchPattern(event.searchPattern));
     sfsApi.eventStream.on("FETCH_RESULTS_PENDING", () => setIsFetching(true));
     sfsApi.eventStream.on("FETCH_RESULTS_SUCCESS", (event) => {
       setResults(event.results as Results);
@@ -35,5 +41,6 @@ export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
   return {
     results,
     isFetching,
+    lastSearchPattern,
   };
 }

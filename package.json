@@ -38,6 +38,6 @@
     "doc": "docs"
   },
   "dependencies": {
-    "sfs-api": "latest"
+    "sfs-api": "^1.0.2"
   }
 }
