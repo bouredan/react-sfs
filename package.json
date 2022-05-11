@@ -24,7 +24,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "prepublish": "yarn build && npx typedoc index.ts && git add ."
+    "docs": "npx typedoc index.ts",
+    "prepublish": "tsc"
   },
   "dependencies": {
     "sfs-api": "^1.0.5"
