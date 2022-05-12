@@ -1,5 +1,9 @@
 import {useEffect, useState} from "react";
-import {Results, SfsApi} from "sfs-api";
+import {Facet, Results, SfsApi} from "sfs-api";
+import {UseFacetResult} from "./useFacet";
+
+
+export type UseFacetSearch = (sfsApi: SfsApi) => UseFacetSearchResult;
 
 export interface UseFacetSearchResult {
   /**
