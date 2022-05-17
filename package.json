@@ -1,6 +1,6 @@
 {
   "name": "react-sfs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Hooks to simplify the use of SFS library in React apps.",
   "keywords": [
     "react",
@@ -19,6 +19,7 @@
   "main": "dist/react-sfs.js",
   "module": "dist/react-sfs.mjs",
   "typings": "dist/react-sfs.d.ts",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -29,7 +30,7 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "sfs-api": "^1.0.10"
+    "sfs-api": "^1.0.11"
   },
   "peerDependencies": {
     "react": "^17.0.2"

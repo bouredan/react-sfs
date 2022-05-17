@@ -578,14 +578,13 @@ sax@~1:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-sfs-api@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/sfs-api/-/sfs-api-1.0.10.tgz#1620f910027a89db694f9391014adfe2fcd18def"
-  integrity sha512-Oq86SDHf8iNmI6Q+SZQK5uUyE8pRUjuaJjliH/0TcY1y2jw1rY6NwLEkxFaO1zXRansBvjeNsVfFiyT7gATflw==
+sfs-api@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/sfs-api/-/sfs-api-1.0.11.tgz#af877c2a42d5007ec51cadf95f979d492200a510"
+  integrity sha512-XlfMYihT0JU5sMIYAr834Nz4akMlitGJjrM84sPbtCGgGIZP4T8A29nE6BxzLVVMJm2orPPimOyfQG20KpsTgQ==
   dependencies:
     fetch-sparql-endpoint "^2.4.0"
     rdf-data-factory "^1.1.0"
-    rollup-plugin-dts "^4.2.1"
     sparqljs "^3.5.1"
 
 shiki@^0.10.1:
