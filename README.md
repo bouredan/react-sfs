@@ -1,7 +1,7 @@
 # React SFS
-React hooks for using [sfs-api](https://www.npmjs.com/package/sfs-api).
+Hooks to simplify the use of [SFS library](https://www.npmjs.com/package/sfs-api) in React apps.
 
-###[API Reference](https://bouredan.github.io/react-sfs)
+### [API Reference](https://bouredan.github.io/react-sfs)
 
 ### useFacetSearch(sfsApi)
 React hook for using facet search state and results.

@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useState} from "react"
 import {Facet, FacetOption} from "sfs-api";
 
+
 export type UseFacet<Value> = (facet: Facet<Value>) => UseFacetResult<Value>;
 
 export interface UseFacetResult<Value> {
@@ -79,4 +80,4 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
     isFetching,
     error
   };
-};
+}
