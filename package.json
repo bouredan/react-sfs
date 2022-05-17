@@ -1,6 +1,6 @@
 {
   "name": "react-sfs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Hooks to simplify the use of SFS library in React apps.",
   "keywords": [
     "react",
