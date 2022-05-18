@@ -1,21 +1,27 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
     "jsx": "react-jsx",
+    "module": "commonjs",
     "lib": [
       "esnext",
       "dom"
     ],
     "outDir": "./dist",
     "target": "es6",
+    "incremental": true,
+    "declaration": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "importHelpers": false,
     "strict": true
   },
   "include": [
-    "src/index.ts",
-    "src/**/*"
+    "index.ts",
+    "src/**/*",
   ],
   "exclude": [
     "node_modules",
