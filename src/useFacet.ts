@@ -70,7 +70,7 @@ export function useFacet<Value>(facet: Facet<Value>): UseFacetResult<Value> {
         setError(event.error);
       }
     });
-    if (!facet.isFetching && !facet.options) {
+    if (!facet.isFetching) {
       facet.refreshOptions();
     }
   }, [facet]);

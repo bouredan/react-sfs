@@ -49,7 +49,7 @@ export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
       setIsFetching(false);
       setError(event.error);
     });
-    if (!sfsApi.isFetching && !sfsApi.results) {
+    if (!sfsApi.isFetching) {
       sfsApi.fetchResults();
     }
   }, []);
