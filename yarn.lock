@@ -309,10 +309,10 @@ sax@~1:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-sfs-api@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/sfs-api/-/sfs-api-1.0.12.tgz#a5b780a089afba9f92cdaa119b644ceb85f85225"
-  integrity sha512-Dmarbsug0yTt3GQR3PJUF4RekeonbTbeY4vqvx4+LPv5LeqzV6afV1JFQTCyToLXMfps077M7m7l2YzTCv9ipw==
+sfs-api@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/sfs-api/-/sfs-api-1.0.13.tgz#6f7add5867c57b46bf8b19f721ebfdea174eb54f"
+  integrity sha512-f5X1eSZUs26CwURyZYP9WtehIj2gQEF75zLdhNnOgEQXf/LHn5+Hza/mPrTaI+04N5E0WSnGma03w0XIcNgb/w==
   dependencies:
     fetch-sparql-endpoint "^2.4.0"
     rdf-data-factory "^1.1.0"

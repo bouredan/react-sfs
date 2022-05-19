@@ -20,8 +20,7 @@
     "strict": true
   },
   "include": [
-    "index.ts",
-    "src/**/*",
+    "src/index.ts",
   ],
   "exclude": [
     "node_modules",

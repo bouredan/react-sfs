@@ -49,7 +49,9 @@ export function useFacetSearch(sfsApi: SfsApi): UseFacetSearchResult {
       setIsFetching(false);
       setError(event.error);
     });
-    sfsApi.fetchResults();
+    if (!sfsApi.isFetching && !sfsApi.results) {
+      sfsApi.fetchResults();
+    }
   }, []);
 
   return {
